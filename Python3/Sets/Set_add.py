@@ -8,8 +8,6 @@ print(s.add('a'))
 print(s)
 '''
 
-
-
 N = int(input())
 se = set()
 for v in range(N):
