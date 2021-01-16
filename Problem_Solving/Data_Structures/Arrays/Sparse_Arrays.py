@@ -1,5 +1,5 @@
 n = int(input())
-arr_string = [] 
+arr_string = []
 for v in range(n):
     arr_string.append(input())
 q = int(input())

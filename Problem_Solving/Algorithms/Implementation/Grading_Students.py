@@ -15,7 +15,8 @@ def gradingStudents(grades):
                 arr.append(v)
     return arr
 
-grades_count= int(input())
+
+grades_count = int(input())
 grades = [int(input()) for v in range(grades_count)]
 
 result = gradingStudents(grades)

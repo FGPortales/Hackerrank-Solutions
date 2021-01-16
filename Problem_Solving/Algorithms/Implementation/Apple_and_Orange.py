@@ -14,4 +14,4 @@ for v in range(n):
     if thrown_oranges[v] >= s and thrown_oranges[v] <= t:
         oranges += 1
 
-print("{}\n{}".format(apples,oranges))
+print("{}\n{}".format(apples, oranges))
