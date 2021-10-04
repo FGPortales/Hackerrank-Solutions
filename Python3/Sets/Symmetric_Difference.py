@@ -1,16 +1,11 @@
+
 def my_function():
     int(input())
-    set_m = set(input().split())
+    set_m = set(map(int, input().split()))
     int(input())
-    set_n = set(input().split())
-
-    total = set_m.difference(set_n).union(set_n.difference(set_m))
-    total = [int(v) for v in total]
-    total.sort()
-    return(total)
+    set_n = set(map(int, input().split()))
+    [print(v) for v in sorted(set_m ^ set_n)]
 
 
 if __name__ == '__main__':
-    result = my_function()
-    for v in result:
-        print(v)
+    my_function()
