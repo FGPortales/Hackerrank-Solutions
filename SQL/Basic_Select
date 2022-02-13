@@ -1,0 +1,48 @@
+
+
+Title: Revising the Select Query I
+select * from city where population > 100000 and countrycode = 'USA'
+
+Title: Revising the Select Query II
+select name from city where population > 120000 and countrycode = 'USA'
+
+Title: Select All
+select * from city
+
+Title: Select By ID
+select * from city where id = 1661
+
+Title: Japanese Cities' Attributes
+select * from city where countrycode = 'JPN'
+
+Title: Japanese Cities' Names
+select name from city where countrycode = 'JPN'
+
+Title: Weather Observation Station 1
+select city, state from station
+
+Title: Weather Observation Station 3
+select distinct city from station s where mod(s.id, 2) = 0
+
+Title: Weather Observation Station 4
+select count(city) - count(distinct city) from station
+
+Title: Weather Observation Station 5
+select city, length(city) as length_city from station order by length_city asc, city asc LIMIT 0,1;
+select city, length(city) as length_city from station order by length_city desc, city asc LIMIT 0,1;
+
+Title: Weather Observation Station 6
+select distinct city from station where substring(city,1,1) in ('A','E','I','O','U');
+Recommended: select distinct CITY from STATION where CITY RLIKE '^[AEIOU]'
+
+Title: Weather Observation Station 7
+select distinct city from station where city rlike '[AEIOU]$'
+
+Title: Weather Observation Station 8
+select distinct city from station where city rlike '^[aeiou]' and city rlike '[aeiou]$'
+
+Title: Weather Observation Station 9
+select distinct city from station where city not rlike '^[aeiou]'
+
+Title: Weather Observation Station 10
+select distinct city from station where city rlike '[^aeiou]$'
