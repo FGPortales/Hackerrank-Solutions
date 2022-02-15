@@ -46,3 +46,20 @@ select distinct city from station where city not rlike '^[aeiou]'
 
 Title: Weather Observation Station 10
 select distinct city from station where city rlike '[^aeiou]$'
+
+Title: Weather Observation Station 11
+select distinct city from station where city not rlike '^[aeiou]' or city not rlike '[aeiou]$'
+another solution: select distinct city from station where left(city,1) not in ('A','E','I','O','U') OR
+right(city,1) not in ('a','e','i','o','u')
+
+Title: Weather Observation Station 12
+select distinct city from station where city not rlike '^[aeiou]' and city not rlike '[aeiou]$'
+
+Title: Higher Than 75 Marks
+select name from students where marks > 75 order by right(name, 3), id asc
+
+Title: Employee Names
+select name from employee order by name
+
+Title: Employee Names
+select name from employee where salary > 2000 and months < 10 order by employee_id asc
